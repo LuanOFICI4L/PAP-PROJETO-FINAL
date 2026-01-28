@@ -1,0 +1,472 @@
+/* =====================================================
+   RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #f2f2f2;
+  background: linear-gradient(180deg, #050505, #0a0a0a);
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 48px;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo img {
+  height: 58px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 13px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #ffffff;
+  color: #000;
+  border-radius: 60px;
+  transform: scale(1.1);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+section {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  position: relative;
+}
+
+.bg-text {
+  position: absolute;
+  font-size: 160px;
+  font-weight: 800;
+  letter-spacing: 14px;
+  color: rgba(255, 255, 255, 0.03);
+  user-select: none;
+}
+
+.logo-central {
+  width: 300px;
+  margin: 30px auto;
+  animation: flutuarCentral 4.5s ease-in-out infinite;
+}
+
+@keyframes flutuarCentral {
+  50% { transform: translateY(-10px); }
+}
+
+.blur-box {
+  margin: 25px auto 0;
+  padding: 18px 24px;
+  max-width: 640px;
+  border-radius: 16px;
+}
+
+.texto-info {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d0d0d077;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+.stats {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.stat-number {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.stat-text {
+  font-size: 12px;
+  color: #9e9e9e;
+  text-transform: uppercase;
+  
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+}
+
+.item {
+  text-align: center; 
+}
+
+.numero {
+  font-size: 2em; 
+  font-weight: bold;
+  color:  #ff8c00;
+}
+
+.descricao {
+  font-size: 1em; 
+  margin-top: 5px; 
+  color: #ffffff44;
+}
+
+
+
+
+/* =====================================================
+   TITULO GRANDE
+===================================================== */
+
+.titulo {
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffffffc7, #FF4500); /* laranja para laranja mais escuro */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* =====================================================
+   VITRINE GPUs
+===================================================== */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.gpu-vitrine {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gpu-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+
+.gpu-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff8c00;
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(255, 140, 0, 0.35);
+}
+
+.gpu-image {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gpu-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* =====================================================
+   GPU BRAND (Comum para cards e detalhes)
+===================================================== */
+.gpu-brand {
+  position: absolute;
+  top: 18px;   /* antes 12px, agora um pouco mais baixo */
+  left: 10px;  /* antes 12px, agora um pouco mais à direita */
+  padding: 9px 18px;
+  border-radius: 20px;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gpu-brand:hover {
+  transform: scale(1.08);
+}
+
+.gpu-brand.nvidia {
+  background: linear-gradient(135deg, #ff6a00, #ff6a00);
+}
+
+.gpu-brand.amd {
+  background: linear-gradient(135deg, #ff6a00, #ff6a00);
+}
+
+.gpu-brand.intel {
+  background: linear-gradient(135deg, #ff6a00, #ff6a00);
+}
+
+/* Botões */
+.btn-saiba-mais,
+.btn-saiba-mais-card {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-saiba-mais-card {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #ff6a00, #ff8c00);
+  font-size: 14px;
+}
+
+.btn-saiba-mais-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 106, 0, 0.6);
+}
+
+.btn-saiba-mais:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #9a9a9a;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-logo {
+  width: 180px;
+}
+
+/* =====================================================
+   PÁGINA DETALHE GPU
+===================================================== */
+.gpu-detalhe {
+  min-height: 80vh;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gpu-detalhe-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.gpu-detalhe-imagem {
+  position: relative;
+  background: #0d0d0d;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.gpu-detalhe-imagem img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.gpu-detalhe-info h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #f2f2f2;
+}
+
+.gpu-descricao {
+  font-size: 16px;
+  color: #9a9a9a;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.gpu-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.spec-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.spec-label {
+  font-size: 12px;
+  color: #9a9a9a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.spec-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+
+.gpu-preco {
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.2), rgba(255, 140, 0, 0.1));
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.preco-label {
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+.preco-valor {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ff6a00;
+}
+
+.btn-voltar {
+  display: inline-block;
+  padding: 14px 28px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #f2f2f2;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background: #ff6a00;
+  border-color: #ff6a00;
+  transform: translateX(-5px);
+}
+
+/* =====================================================
+   BLOCO DE INFORMAÇÕES DO CARD
+===================================================== */
+.gpu-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.gpu-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.gpu-arch {
+  font-size: 13px;
+  color: #9a9a9a;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.gpu-specs {
+  display: flex;
+  gap: 18px;
+  font-size: 13px;
+  color: #bdbdbd;
+  margin-bottom: 18px;
+}
+
+.gpu-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ff6a00;
+  margin-bottom: 16px;
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+@media (max-width: 900px) {
+  .gpu-vitrine { grid-template-columns: repeat(2, 1fr); }
+  .gpu-detalhe-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 24px;
+  }
+  .gpu-detalhe-info h1 { font-size: 28px; }
+  .gpu-specs-grid { grid-template-columns: 1fr; }
+  .preco-valor { font-size: 24px; }
+}
+
+@media (max-width: 500px) {
+  .gpu-vitrine { grid-template-columns: 1fr; }
+  .bg-text { font-size: 90px; }
+}
